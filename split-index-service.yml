@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: split-index
+  namespace: aeteq-dev
+spec:
+  selector:
+    app: split-index
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP
